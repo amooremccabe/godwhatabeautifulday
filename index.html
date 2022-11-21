@@ -2,14 +2,29 @@
 <html>
 <head>
 <script>
-console.log("Hi")
+
     const hashCode = s => s.split('').reduce((a,b) => (((a << 5) - a) + b.charCodeAt(0))|0, 0)
- var password; 
-    var pass1="1925716107"; 
-  password=prompt('Enter Password',' '); 
-    if (hashCode(password)==pass1) ; 
-    else { window.location="index.html"; 
-   } 
+    var password;
+    
+
+console.log(hashCode("droozba"))
+
+var pass1="1925716107";
+
+password=prompt('Please enter your password',' ');
+
+if (password==null) {
+    password = "bob";
+    window.location="index.html";}
+   
+ else {
+     if (hashCode(password)==pass1)
+     alert('Password Correct! Click OK to enter!');
+    else
+   {
+    window.location="index.html";
+    }
+} 
 </script> 
 </head>
 
